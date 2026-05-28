@@ -1,4 +1,4 @@
-def call (map Config = [:])
+def call (Map Config = [:]) {
 def ecrUrl= config.get('ecrUrl')
 def tag= config.get('tag', 'latest')
 if (!ecrUrl) {
