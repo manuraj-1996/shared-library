@@ -1,4 +1,4 @@
-def call (Map config =  [:]) {
+def call (Map config = [:]) {
 def imageName= config.get('imageName')
 def ecrUrl= config.get ('ecrUrl')
 def tag= config.get('tag','latest')
