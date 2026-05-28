@@ -1,4 +1,4 @@
-def call (script, config = [:]) {
+def call (script, Map config) {
 def credentialsId= config.get('credentialsId')
 def region= config.get('region')
 def accountId= config.get('accountId')
