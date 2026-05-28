@@ -1,8 +1,8 @@
 def call (Map config) {
-def credentialsId= config.get('credentialsId')
-def region= config.get('region')
-def accountId= config.get('accountId')
-def ecrCredentialsId= config.get('ecrCredentialsId')
+def credentialsId = config.get('credentialsId')
+def region = config.get('region')
+def accountId = config.get('accountId')
+def ecrCredentialsId = config.get('ecrCredentialsId')
 if (!credentialsId || !region || !accountId) { 
 error "credentialsId, region and accountId are required"
 }
