@@ -1,4 +1,4 @@
-def Call(script){
+def call(script, config = [:]) {
 script.env.AWS_REGION= 'us-east-1'
 script.env.ACCOUNT_ID= '772064137213'
 script.env.ECR_REPO= 'ecommerce'
