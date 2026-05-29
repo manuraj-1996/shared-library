@@ -1,13 +1,8 @@
-def call (Map Config = [:]) {
-def ecrUrl= config.get('ecrUrl')
-def tag= config.get('tag', 'latest')
-if (!ecrUrl) {
-error "ecrUrl is required"
-}
-sh"""
-docker push ${ecrUrl}: ${tag}
-"""
-}
+def call(Map config) {
 
+    sh """
+        docker push ${config.ecrUrl}:${config.tag}
+    """
+}
 
 
