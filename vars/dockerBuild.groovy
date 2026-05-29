@@ -1,9 +1,8 @@
-def call(Map Config = [:]) {
-def imageName = config.get('imageName')
-if (!imageName) {
-error "imageName is required"
-}
-sh """
-docker build -t ${imageName} .
-"""
+def call(Map config) {
+
+    sh """
+        docker build -t ${config.imageName}:${env.BUILD_NUMBER} .
+    """
+
+    env.APP_VERSION = env.BUILD_NUMBER
 }
